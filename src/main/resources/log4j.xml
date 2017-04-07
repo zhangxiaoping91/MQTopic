@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ - Copyright 1999-2011 Alibaba Group.
+ -  
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -  
+ -      http://www.apache.org/licenses/LICENSE-2.0
+ -  
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+-->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="root" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/root.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<!-- [公共Appender] 汇总错误 -->
+	<appender name="ERROR-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/error.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="threshold" value="error"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="biz" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/biz.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="dao" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/dao.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="provider" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/provider.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="consumer" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/consumer.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="api" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/api.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="util" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/util.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="common" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/loanplatform/common.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+
+	<!--业务监控日志 -->
+	<appender name="monitor" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/monitor_loanplatform/error.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+		<param name="Encoding" value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{orgJrnNo}] %-5p %c{2}:%L - %m%n"/>
+		</layout>
+	</appender>
+	<!--业务监控日志 -->
+
+	<!-- biz -->
+	<logger name="com.jiedaibao.loanplatform.biz" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="biz"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- dao -->
+	<logger name="com.jiedaibao.loanplatform.dao" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="dao"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- common -->
+	<logger name="com.jiedaibao.loanplatform.common" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="common"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- provider -->
+	<logger name="com.jiedaibao.loanplatform.provider" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="provider"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- consumer -->
+	<logger name="com.jiedaibao.loanplatform.consumer" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="consumer"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- api -->
+	<logger name="com.jiedaibao.loanplatform.api" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="api"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<!-- util -->
+	<logger name="com.jiedaibao.loanplatform.util" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="util"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</logger>
+
+	<root>
+		<level value="INFO"/>
+		<appender-ref ref="root"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ERROR-APPENDER"/>
+	</root>
+</log4j:configuration>
